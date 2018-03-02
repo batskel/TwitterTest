@@ -16,6 +16,7 @@ public class CounterView implements Serializable {
     private int number;
 
     public int getNumber() {
+        System.out.println("sdadasdasd");
         return number;
     }
 
