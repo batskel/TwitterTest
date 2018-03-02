@@ -22,12 +22,12 @@
 
     <h:body>
 
-        <div id="top" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-            <ui:insert name="top">
+        <ui:insert name="top">
+            <div id="top" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
                 <a class="navbar-brand" href="#">Start Bootstrap</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
-                </button>
+                </button>   
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item active">
@@ -46,20 +46,26 @@
                         </li>
                     </ul>
                 </div>
-            </ui:insert>
-        </div>
-        <div>
-            <div id="left">
-                <ui:insert name="left">
-                    <ui:include src="/templates/left.xhtml"/>  
-                </ui:insert>
             </div>
-            <div id="content" class="container">
-                <ui:insert name="content">
-                    <ui:include src="/web/recurs.xhtml"/>
-                </ui:insert>
+        </ui:insert>
+<!--ghdfhdr-->
+        <div class="row">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-2">
+                        <ui:insert name="left">
+                            <ui:include src="/templates/left.xhtml"/>  
+                        </ui:insert>
+                    </div>
+                    <div class="col-md-10">
+                        <ui:insert name="content">
+                            <ui:include src="/web/recurs.xhtml"/>
+                        </ui:insert>
+                    </div>
+                </div>
             </div>
         </div>
+
     </h:body>
 
 </html>
